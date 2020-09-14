@@ -31,21 +31,25 @@ also check the connectivity.
 1. in Controller Node
 
 > hostnamectl set-hostname workstation.lab.example.com 
+
 > bash
 
 2. in managed node 1
 
-> hostnamectl set-hostname servera.lab.example.com 
+> hostnamectl set-hostname servera.lab.example.com
+
 > bash
 
 3. in managed node 2
 
 > hostnamectl set-hostname serverb.lab.example.com 
+
 > bash
 
 4. in managed node 3
 
 > hostnamectl set-hostname serverc.lab.example.com 
+
 > bash
 
 ## then login as devops user in Controller Node
