@@ -1,5 +1,7 @@
 ## launch five vms( one gui and other four cli)
 
+__they should have connectivity so attach the host-only and NAT network adapter__.
+
   1. one cli vm for controller node
   2. one gui vm for login to controller node
   3. three cli vm for managed node
