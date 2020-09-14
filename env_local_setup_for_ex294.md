@@ -55,15 +55,21 @@ press enter multiple times
 then copy this key to the managed nodes
 
 > ssh-copy-id devops@servera.lab.example.com 
+
 > yes
+
 > type the passwd for the devops user u have set in that managed node 1
 
 > ssh-copy-id devops@serverb.lab.example.com 
+
 > yes
+
 > type the passwd for the devops user u have set in that managed node 2
 
 > ssh-copy-id devops@serverc.lab.example.com 
+
 > yes
+
 > type the passwd for the devops user u have set in that managed node 3
 
 
@@ -79,6 +85,7 @@ ip of controller node   workstation.lab.example.com
 > ssh devops@workstation.lab.example.com
 
 > yes
+
 > type the password for devops user u have set in Controller Node
 
 
