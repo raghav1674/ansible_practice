@@ -6,19 +6,19 @@
 
 ## create devops user in Controller node as well as in the Managed node.
  
- '''>useradd devops
-   passwd devops
- enter the passwd '''
+ > useradd devops
+ > passwd devops
+ enter the passwd 
 
 ## grant sudo powers to devops user in Controller as well as the managed nodes.
 
-'''>vim /etc/sudoers.d/devops
+> vim /etc/sudoers.d/devops
 
-devops ALL=(ALL)  NOPASSWD: ALL'''
+devops ALL=(ALL)  NOPASSWD: ALL
 
 ## then in /etc/hosts in Controller Node
 
-'''ip of managed node 1   servera.lab.example.com
+ip of managed node 1   servera.lab.example.com
 ip of managed node 2   serverb.lab.example.com
 ip of managed node 3   serverc.lab.example.com'''
 
@@ -26,7 +26,7 @@ also check the connectivity.
 
 ## change the hostname 
 
-'''1. in Controller Node
+1. in Controller Node
 
 > hostnamectl set-hostname workstation.lab.example.com 
 > bash
@@ -44,11 +44,11 @@ also check the connectivity.
 4. in managed node 3
 
 > hostnamectl set-hostname serverc.lab.example.com 
-> bash'''
+> bash
 
 ## then login as devops user in Controller Node
 
-'''> ssh-keygen
+> ssh-keygen
 
 press enter multiple times
 
@@ -64,22 +64,22 @@ then copy this key to the managed nodes
 
 > ssh-copy-id devops@serverc.lab.example.com 
 > yes
-> type the passwd for the devops user u have set in that managed node 3'''
+> type the passwd for the devops user u have set in that managed node 3
 
 
 ## In Gui vm
 
-'''> vim /etc/hosts
+> vim /etc/hosts
 
-ip of controller node   workstation.lab.example.com'''
+ip of controller node   workstation.lab.example.com
 
 
 ## Login from Gui vm to controller node
 
-'''> ssh devops@workstation.lab.example.com
+> ssh devops@workstation.lab.example.com
 
 > yes
-> type the password for devops user u have set in Controller Node'''
+> type the password for devops user u have set in Controller Node
 
 
 ##  Create a directory playbooks in /home/devops  in Controller Node after login.
