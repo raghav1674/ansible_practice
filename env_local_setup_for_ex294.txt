@@ -1,8 +1,8 @@
 1. launch five vms( one gui and other four cli)
 
-2. one for controller node
-   one for login to controller node
-   three for managed node
+2. one cli vm for controller node
+   one gui vm for login to controller node
+   three cli vm for managed node
 
 3. create devops user in Controller node as well as in the Managed node.
  >> useradd devops
