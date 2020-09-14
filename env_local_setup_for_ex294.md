@@ -6,13 +6,13 @@
 
 ## create devops user in Controller node as well as in the Managed node.
  
- '''>> useradd devops
- >> passwd devops
+ '''> useradd devops
+   passwd devops
  enter the passwd '''
 
 ## grant sudo powers to devops user in Controller as well as the managed nodes.
 
-'''>> vim /etc/sudoers.d/devops
+'''> vim /etc/sudoers.d/devops
 
 devops ALL=(ALL)  NOPASSWD: ALL'''
 
@@ -28,58 +28,58 @@ also check the connectivity.
 
 '''1. in Controller Node
 
->> hostnamectl set-hostname workstation.lab.example.com 
->> bash
+> hostnamectl set-hostname workstation.lab.example.com 
+> bash
 
 2. in managed node 1
 
->> hostnamectl set-hostname servera.lab.example.com 
->> bash
+> hostnamectl set-hostname servera.lab.example.com 
+> bash
 
 3. in managed node 2
 
->> hostnamectl set-hostname serverb.lab.example.com 
->> bash
+> hostnamectl set-hostname serverb.lab.example.com 
+> bash
 
 4. in managed node 3
 
->> hostnamectl set-hostname serverc.lab.example.com 
->> bash'''
+> hostnamectl set-hostname serverc.lab.example.com 
+> bash'''
 
 ## then login as devops user in Controller Node
 
-'''>> ssh-keygen
+'''> ssh-keygen
 
 press enter multiple times
 
 then copy this key to the managed nodes
 
->> ssh-copy-id devops@servera.lab.example.com 
->> yes
->> type the passwd for the devops user u have set in that managed node 1
+> ssh-copy-id devops@servera.lab.example.com 
+> yes
+> type the passwd for the devops user u have set in that managed node 1
 
->> ssh-copy-id devops@serverb.lab.example.com 
->> yes
->> type the passwd for the devops user u have set in that managed node 2
+> ssh-copy-id devops@serverb.lab.example.com 
+> yes
+> type the passwd for the devops user u have set in that managed node 2
 
->> ssh-copy-id devops@serverc.lab.example.com 
->> yes
->> type the passwd for the devops user u have set in that managed node 3'''
+> ssh-copy-id devops@serverc.lab.example.com 
+> yes
+> type the passwd for the devops user u have set in that managed node 3'''
 
 
 ## In Gui vm
 
-'''>> vim /etc/hosts
+'''> vim /etc/hosts
 
 ip of controller node   workstation.lab.example.com'''
 
 
 ## Login from Gui vm to controller node
 
-'''>> ssh devops@workstation.lab.example.com
+'''> ssh devops@workstation.lab.example.com
 
->> yes
->> type the password for devops user u have set in Controller Node'''
+> yes
+> type the password for devops user u have set in Controller Node'''
 
 
 ##  Create a directory playbooks in /home/devops  in Controller Node after login.
@@ -90,7 +90,7 @@ ip of controller node   workstation.lab.example.com'''
 
 ## install ansible using pip3 
 
->> pip3 install ansible  in controller node 
+> pip3 install ansible  in controller node 
 
 ## inside playbooks/ 
 
