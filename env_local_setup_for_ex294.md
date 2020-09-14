@@ -1,4 +1,4 @@
-1. launch five vms( one gui and other four cli)
+1.launch five vms( one gui and other four cli)
 
 2. one cli vm for controller node
    one gui vm for login to controller node
