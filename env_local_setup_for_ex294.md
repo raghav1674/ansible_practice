@@ -6,13 +6,13 @@
 
 ## create devops user in Controller node as well as in the Managed node.
  
- '''> useradd devops
+ '''>useradd devops
    passwd devops
  enter the passwd '''
 
 ## grant sudo powers to devops user in Controller as well as the managed nodes.
 
-'''> vim /etc/sudoers.d/devops
+'''>vim /etc/sudoers.d/devops
 
 devops ALL=(ALL)  NOPASSWD: ALL'''
 
